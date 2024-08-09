@@ -1,0 +1,575 @@
+:root {
+    --green-text: #84c754;
+    --border-color: #00ff00;
+    --border-dark: #007700;
+    --font-text-family: 'Courier New', Courier, monospace;
+    --font-size: 10px;
+}
+
+html,
+body {
+    overflow: hidden !important;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text-family);
+    font-size: var(--font-size);
+    background-color: black;
+    color: var(--green-text);
+    margin: 0 !important;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-page,
+#loading-page {
+    flex-direction: column;
+}
+
+#welcome-title {
+    font-size: 8.5em;
+    margin: 10px;
+    text-align: center;
+}
+
+
+@keyframes welcome-subtitle-animation {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#welcome-subtitle {
+    font-size: 2.2em;
+    animation: welcome-subtitle-animation 1s linear infinite alternate;
+    text-align: center;
+}
+
+
+#loading-bar {
+    width: 70dvw;
+    height: 20dvh;
+    border: var(--green-text) 5px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.loading-bar-fill {
+    width: calc(70dvw / 8);
+    height: 20dvh;
+    background-color: var(--green-text);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#loading-text {
+    font-size: 2.5em;
+}
+
+@keyframes loading-text-animation {
+    to {
+        clip-path: inset(0 -34% 0 0)
+    }
+}
+
+#loading-text>span {
+    clip-path: inset(0 100% 0 0);
+    animation: loading-text-animation 1500ms steps(4) infinite;
+}
+
+
+#home-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-shadow: inset 0 0 10px var(--border-dark), 0 0 15px rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+}
+
+#about-me,
+#options {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--border-color) 2px solid;
+    box-shadow: inset 0 0 10px var(--border-dark);
+    border-radius: 10px;
+}
+
+#about-me {
+    width: 30%;
+}
+
+#options {
+    width: 70%;
+}
+
+#picture,
+#about-description {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border: var(--border-color) 2px solid;
+    margin: 5px;
+    box-shadow: inset 0 0 10px var(--border-dark);
+    border-radius: 10px;
+}
+
+#about-description {
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#about-description>p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#about-mobile,
+.ascii-header-mobile {
+    display: none;
+}
+
+#about-desktop,
+.ascii-header-desktop {
+    display: block;
+}
+
+.btn-options {
+    width: 80%;
+    height: calc(100% / 5);
+    background-color: transparent;
+    color: aliceblue;
+    border: var(--border-color) 2px solid;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px var(--border-dark);
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.btn-options-text {
+    font-family: var(--font-text-family) !important;
+    font-size: 3em;
+}
+
+
+
+.options-content {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.btn-back {
+    position: relative;
+    bottom: 0px;
+    font-family: var(--font-text-family) !important;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: var(--green-text);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section-new {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--border-color) 2px solid;
+    border-radius: 10px;
+}
+
+/* Glow effect for borders */
+#about-me,
+#options,
+.btn-options,
+#picture,
+#about-description,
+.content-section-new {
+    box-shadow: 0 0 5px var(--border-dark);
+}
+
+/* CRT screen effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Text glow effect */
+#about-description>p,
+.btn-options,
+.content-section-new,
+.btn-back {
+    text-shadow: 0 0 5px var(--green-text);
+}
+
+/* Button hover effect */
+.btn-options:hover {
+    background-color: rgba(132, 199, 84, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.education-section,
+.work-experience-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.education-section h3,
+.work-experience-section h3 {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+.education-section h4 {
+    margin-top: 0px;
+}
+
+.education-section p,
+.education-section h4,
+.work-experience-section p {
+    font-size: 1.5em;
+}
+
+.education-section-school,
+.work-experience-place {
+    width: 70%;
+}
+
+.work-experience-technical-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-experience-technical-skills h3 {
+    font-size: 1.8em;
+}
+
+.table-head {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 30%;
+}
+
+.table-skill {
+    font-size: 1.5em;
+}
+
+.table-head,
+.table-skill {
+    padding: 5px;
+}
+
+.education-articles {
+    padding: 5px;
+}
+
+.education-articles h3 {
+    font-size: 1.8em;
+}
+
+.education-articles a {
+    color: var(--green-text);
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.project-title {
+    font-size: 3em;
+    text-align: center;
+}
+
+
+.project-image-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    z-index: 1001;
+    /* Remove the effect of CRT on images */
+}
+
+.project-image {
+    width: 80%;
+    height: 80%;
+}
+
+.project-image-description p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.interest>h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.interest>p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    /* Adds some spacing between the images */
+    z-index: 1001;
+    /* Remove the effect of CRT on images */
+}
+
+.image-container {
+    width: 200px;
+    /* Set a fixed width */
+    height: 200px;
+    /* Set a fixed height */
+    overflow: hidden;
+    /* Ensures that anything overflowing the container is hidden */
+}
+
+.image-tv-container {
+    width: 150px;
+    /* Set a fixed width */
+    height: 400px;
+    /* Set a fixed height */
+    overflow: hidden;
+    /* Ensures that anything overflowing the container is hidden */
+}
+
+.image-book-container {
+    width: 230px;
+    /* Set a fixed width */
+    height: 400px;
+    /* Set a fixed height */
+    overflow: hidden;
+    /* Ensures that anything overflowing the container is hidden */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+hr {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.815);
+}
+
+
+@media screen and (max-width: 700px) {
+    #welcome-title {
+        font-size: 4em;
+    }
+
+    #welcome-subtitle {
+        font-size: 1.5em;
+    }
+
+    #loading-text {
+        font-size: 1.5em;
+    }
+
+    #home-container {
+        box-sizing: border-box;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    #about-me,
+    #options,
+    .content-section-new {
+        width: calc(100% - 10px);
+    }
+
+    #about-mobile,
+    .ascii-header-mobile {
+        display: block;
+        font-size: 2em;
+    }
+
+    .ascii-header-mobile {
+        text-align: center;
+    }
+
+    #about-desktop,
+    .ascii-header-desktop {
+        display: none;
+    }
+
+    #about-description>p {
+        text-align: left;
+    }
+
+    .btn-options {
+        height: 50px;
+    }
+
+    .btn-options-text {
+        font-size: 1.2em;
+    }
+
+    .btn-back {
+        font-size: 1em;
+    }
+
+    .education-section,
+    .work-experience-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .education-section div,
+    .work-experience-section div {
+        text-align: center;
+    }
+
+    .education-section h3,
+    .work-experience-section h3 {
+        font-size: 1.8em;
+    }
+
+    .education-section p,
+    .education-section h4,
+    .work-experience-section p {
+        font-size: 1.2em;
+    }
+
+
+    .education-articles {
+        text-align: center;
+    }
+
+    .education-articles h3 {
+        font-size: 1.2em;
+    }
+
+    .education-articles a {
+        font-size: 1em;
+    }
+
+    .work-experience-technical-skills h3 {
+        font-size: 1.2em;
+    }
+
+    .table-head {
+        font-size: 1em;
+        width: 10%;
+    }
+
+    .table-skill {
+        font-size: 1em;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-image-description p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .interest>h2 {
+        font-size: 1.8em;
+    }
+
+    .interest>p {
+        font-size: 1em;
+    }
+
+    .image-tv-container,
+    .image-book-container {
+        width: 200px;
+        /* Set a fixed width */
+        height: 300px;
+        /* Set a fixed height */
+        overflow: hidden;
+        /* Ensures that anything overflowing the container is hidden */
+    }
+
+    
+}

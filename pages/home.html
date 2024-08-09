@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Pedro Silva">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>João Pedro Silva</title>
+</head>
+
+<body id="home-page">
+
+    <div id="home-container">
+        <div id="about-me">
+            <div id="picture">
+                <img src="../assets/picture.png" alt="João Pedro Silva" width="100%" height="100%">
+            </div>
+            <div id="about-description">
+                <p>
+                    Hi, my name is João Pedro Silva. I'm a 24-year-old software developer from Porto, Portugal.
+                </p>
+                <p>
+                    Currently, I'm part of a team that develops web applications for the port sector, more precisely,
+                    helping the industry to digitalize its processes.
+                </p>
+                <p id="about-desktop">
+                    On the right side, you can find all my information, including my education, work experience,
+                    projects, and interests.
+                </p>
+                <p id="about-mobile">
+                    Below, you can find all my information, including my education, work experience,
+                    projects, and interests.
+                </p>
+            </div>
+        </div>
+        <div id="options">
+            <button class="btn-options" onclick="showContent('option-education')"><span
+                    class="btn-options-text">EDUCATION</span></button>
+            <button class="btn-options" onclick="showContent('option-work-experience')"><span
+                    class="btn-options-text">WORK
+                    EXPERIENCE</span></button>
+            <button class="btn-options" onclick="showContent('option-projects')"><span
+                    class="btn-options-text">PROJECTS</span></button>
+            <button class="btn-options" onclick="showContent('option-interests')"><span
+                    class="btn-options-text">INTERESTS</span></button>
+        </div>
+
+        <div id="option-education" class="content-section">
+            <h2>
+                <pre class="ascii-header-desktop">
+ ______    _                 _   _             
+|  ____|  | |               | | (_)            
+| |__   __| |_   _  ___ __ _| |_ _  ___  _ __  
+|  __| / _` | | | |/ __/ _` | __| |/ _ \| '_ \ 
+| |___| (_| | |_| | (_| (_| | |_| | (_) | | | |
+|______\__,_|\__,_|\___\__,_|\__|_|\___/|_| |_|
+                </pre>
+                <span class="ascii-header-mobile">
+                    Education
+                </span>
+            </h2>
+            <div class="options-content">
+
+                <hr class="solid">
+                <div class="education-section">
+                    <div class="education-school">
+                        <h3>Instituto Superior de Engenharia do Porto, ISEP</h3>
+                        <h4><i>Polytechnic of Porto - School of Engineering</i></h4>
+                        <p>Bachelor's Degree in Informatics Engineering</p>
+                    </div>
+                    <p><i>September 2017 - July 2020</i></p>
+                </div>
+                <br>
+                <hr class="solid">
+                <br>
+                <div class="education-section">
+                    <div class="education-school">
+                        <h3>Instituto Superior de Engenharia do Porto, ISEP</h3>
+                        <h4><i>Polytechnic of Porto - School of Engineering</i></h4>
+                        <p>Master's Degree in Graphics Systems and Multimedia</p>
+                    </div>
+                    <p><i>September 2020 - July 2022</i></p>
+                </div>
+                <br>
+                <div class="education-articles">
+                    <h3>Articles related to the master's degree:</h3>
+                    <p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=pt-PT&user=JiQfOsUAAAAJ&citation_for_view=JiQfOsUAAAAJ:u5HHmVD_uO8C"
+                            target="_blank">
+                            Digital Twin 3D Platform for Collaborative Representation and Editing of IFC Documents
+                            Applied to the Bim Methodology
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=pt-PT&user=JiQfOsUAAAAJ&citation_for_view=JiQfOsUAAAAJ:u-x6o8ySG0sC"
+                            target="_blank">
+                            Digital Twin for Monitoring Containerized Hazmat Cargo in Port Areas
+                        </a>
+                    </p>
+                    </ul>
+                </div>
+
+                <br>
+                <hr class="solid">
+            </div>
+            <button class="btn-back" onclick="showOptions()">
+                Press ESC to return or click here
+            </button>
+        </div>
+        <div id="option-work-experience" class="content-section">
+            <h2>
+                <pre class="ascii-header-desktop">
+__          __        _      ______                      _                     
+\ \        / /       | |    |  ____|                    (_)                    
+ \ \  /\  / /__  _ __| | __ | |__  __  ___ __   ___ _ __ _  ___ _ __   ___ ___ 
+  \ \/  \/ / _ \| '__| |/ / |  __| \ \/ / '_ \ / _ \ '__| |/ _ \ '_ \ / __/ _ \
+   \  /\  / (_) | |  |   <  | |____ >  <| |_) |  __/ |  | |  __/ | | | (_|  __/
+    \/  \/ \___/|_|  |_|\_\ |______/_/\_\ .__/ \___|_|  |_|\___|_| |_|\___\___|
+                                        | |                                    
+                                        |_|                                    
+            </pre>
+                <span class="ascii-header-mobile">
+                    Work Experience
+                </span>
+            </h2>
+            <div class="options-content">
+                <hr class="solid">
+                <div class="work-experience-section">
+                    <div class="work-experience-place">
+                        <h3>INESC TEC & 3MAPS - <span class="job-description"><i>Internship</i></span></h3>
+                        <p>Started the development of a Digital Twin of Leix˜oes Port using JavaScript, ThreeJS, VueJS
+                            and VuetifyJS</p>
+                    </div>
+                    <p><i>February 2020 - June 2020</i></p>
+                </div>
+                <br>
+                <hr class="solid">
+                <br>
+                <div class="work-experience-section">
+                    <div class="work-experience-place">
+                        <h3>3MAPS - <span class="job-description"><i>Fullstack Software Developer</i></span></h3>
+                        <p>Developing innovative business solutions in the Industry 4.0 using JavaScript, VueJS,
+                            VuetifyJS, Laravel, NodeJS, PostgreSQL, Redis, RethinkDB, Docker, Azure and 3D modeling
+                            software</p>
+                    </div>
+                    <p><i>June 2020 - Present</i></p>
+                </div>
+                <br>
+                <hr class="solid">
+                <br>
+                <div class="work-experience-technical-skills">
+                    <h3>TECHNICAL SKILLS</h3>
+                    <table>
+                        <tr>
+                            <td class="table-head">
+                                Programming languages
+                            </td>
+                            <td class="table-skill">
+                                JavaScript, PHP
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-head">
+                                Frameworks & Technologies
+                            </td>
+                            <td class="table-skill">
+                                Laravel, NodeJS, VueJS, VuetifyJS, ThreeJS,
+                                MongoDB, PostgreSQL, Redis, RethinkDB, RabbitMQ,
+                                Postman, Blender, Unreal Engine, Git, Docker
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-head">
+                                Others
+                            </td>
+                            <td class="table-skill">
+                                Agile, Scrum
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <hr class="solid">
+            </div>
+
+            <button class="btn-back" onclick="showOptions()">
+                Press ESC to return or click here
+            </button>
+        </div>
+        <div id="option-projects" class="content-section">
+            <h2>
+                <pre class="ascii-header-desktop">
+
+ _____           _           _       
+|  __ \         (_)         | |      
+| |__) | __ ___  _  ___  ___| |_ ___ 
+|  ___/ '__/ _ \| |/ _ \/ __| __/ __|
+| |   | | | (_) | |  __/ (__| |_\__ \
+|_|   |_|  \___/| |\___|\___|\__|___/
+               _/ |                  
+              |__/                   
+ 
+                </pre>
+                <span class="ascii-header-mobile">
+                    Projects
+                </span>
+            </h2>
+            <div class="options-content">
+
+                <hr class="solid">
+                <div class="project">
+                    <h2 class="project-title">3Park</h2>
+                    <div class="project-image-description">
+                        <img class="project-image" src="../assets/projects/park.png" alt="3PARK">
+
+                        <p>3Park platform represents a spatial data infrastructure designed to consolidate
+                            the geographical information of clients, including cells and parks, into a single
+                            comprehensive
+                            database. This solution facilitates the efficient visualization and management of
+                            containers
+                            within the park, encompassing crucial process configurations such as segregation, IMDG
+                            codes,
+                            operators, and container types.
+                        </p>
+                        <p>3Park is a 3D web application enabling real-time visualization of containers
+                            across all parks within the port. This application integrates with existing
+                            Terminal
+                            Operating Systems (TOS) of the port, meticulously monitoring all container movements and
+                            validating them in accordance with International Maritime Organization (IMO) standards
+                            for
+                            the
+                            segregation of containerized cargo.
+                        </p>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="project">
+                    <h2 class="project-title">Navplanning</h2>
+                    <div class="project-image-description">
+                        <img class="project-image" src="../assets/projects/navplanning.png" alt="3NAV">
+
+                        <p>The NavPlanning platform facilitates the management of ship moorings in ports and the
+                            planning of arrivals and departures through an interactive map. This solution integrates
+                            with the Single Logistics Window, the official declaration system for announcing and
+                            processing procedures among port agents, and allows for real-time map visualization of ships
+                            using AIS signals.
+                        </p>
+                        <p>Users can create plans and scenarios for allocating ships to port spaces, distributing the
+                            available port space for each day. This includes conducting depth studies (ship draft),
+                            assessing the mooring strain on bollards (angles), and ensuring proper spacing between
+                            moorings.
+                        </p>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="project">
+                    <h2 class="project-title">Shorex</h2>
+                    <div class="project-image-description">
+                        <img class="project-image" src="../assets/projects/shorex.png" alt="3SHOREX">
+
+                        <p>The 3Shorex platform constitutes a spatial data infrastructure designed to consolidate the
+                            geographical information of clients (parking spaces) into a single database. This solution
+                            allows for managing port accesses related to both cruise activities (shorex entries) and
+                            non-shorex activities (port personnel, cargo handling). It also enables the management of
+                            configurations associated with the process, such as schedules, types of operators, port
+                            users, parking spaces, vehicle types, and activity logging.
+                        </p>
+                        <p>The platform facilitates the management of numerous cruise ships visiting the port regularly
+                            by organizing all entries that provide services to ships or passengers, including taxis, bus
+                            shuttles, private transports, and water/goods supplies. It grants authorization to each
+                            vehicle or person entering the port, streamlining what would otherwise be a chaotic process.
+                        </p>
+                        <p>3Shorex allows port authorities to issue entrances or approve entry requests sent by service
+                            providers. It utilizes QR codes for security validation at the port entrance. All validated
+                            entries are displayed on a map, providing a real-time view of the space being occupied.</p>
+                    </div>
+                </div>
+                <hr class="solid">
+            </div>
+            <button class="btn-back" onclick="showOptions()">
+                Press ESC to return or click here
+            </button>
+        </div>
+        <div id="option-interests" class="content-section">
+            <h2>
+                <pre class="ascii-header-desktop">
+
+ _____       _                     _       
+|_   _|     | |                   | |      
+  | |  _ __ | |_ ___ _ __ ___  ___| |_ ___ 
+  | | | '_ \| __/ _ \ '__/ _ \/ __| __/ __|
+ _| |_| | | | ||  __/ | |  __/\__ \ |_\__ \
+|_____|_| |_|\__\___|_|  \___||___/\__|___/
+                                           
+                                             
+                 </pre>
+                <span class="ascii-header-mobile">
+                    Interests
+                </span>
+            </h2>
+            <div class="options-content">
+
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Swimming</h2>
+                    <p>Swimming has been a long-standing passion of mine, and I have practiced consistently for over a
+                        decade. Even though I no longer swim actively, I still find time to hit the pool now and then,
+                        enjoying the tranquility and physical benefits it provides. </p>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Painting & Drawing</h2>
+                    <p>I spent about ten years drawing and painting in an atelier, learning new techniques and
+                        experimenting with various canvas.</p>
+                    <p>Some of my paintings:</p>
+                    <div class="images">
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/paintings/turtle.jpg" alt="Turtle">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/paintings/plant.jpg" alt="Plant">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/paintings/tree.jpg" alt="Tree">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/paintings/panda.jpg" alt="Panda">
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Escape Rooms</h2>
+                    <p>Escape rooms have become a favorite pastime, especially when shared with friends. The thrill of
+                        solving complex puzzles and working together to escape within the time limit never gets old.
+                        It's an activity that not only challenges my critical thinking and problem-solving skills.</p>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Gaming</h2>
+                    <p>Gaming has been a constant in my life, with a love for video games that has grown stronger. From
+                        casual play to competitive gaming, I've always been driven by the challenge and excitement that
+                        games offer.This deep involvement naturally sparked an interest in game development.</p>
+                    <p>Some of my favorite games:</p>
+                    <div class="images">
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/games/csgo.jpg"
+                                alt="Counter-strike: Global Offensive">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/games/lol.jpg" alt="League of Legends">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/games/hs.jpg" alt="Hearthstone">
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="../assets/interests/games/pubg.jpg" alt="PUBG">
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Game Development</h2>
+                    <p> I've long been fascinated by the process of creating games, from the initial concept to the
+                        final product. The idea of making my own games is something I’ve always wanted to pursue, as it
+                        combines my love for technology, creativity, and problem-solving.</p>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Watching Series & Movies & Anime</h2>
+                    <p> In addition to these hobbies, I have a passion for watching series, movies, and anime. Whether
+                        it's diving into a captivating storyline or appreciating the artistry of animation, I love
+                        immersing myself in different worlds and narratives in my spare time.</p>
+                    <p>Some of my favorite:</p>
+                    <div class="images">
+                        <div class="image-tv-container">
+                            <img class="image" src="../assets/interests/tv/bb.jpg" alt="Breaking Bad">
+                        </div>
+                        <div class="image-tv-container">
+                            <img class="image" src="../assets/interests/tv/wire.jpg" alt="The Wire">
+                        </div>
+                        <div class="image-tv-container">
+                            <img class="image" src="../assets/interests/tv/mafia.jpg" alt="Goodfellas">
+                        </div>
+                        <div class="image-tv-container">
+                            <img class="image" src="../assets/interests/tv/deus.jpg" alt="Cidade de Deus">
+                        </div>
+                        <div class="image-tv-container">
+                            <img class="image" src="../assets/interests/tv/aot.jpg" alt="Attack on Titan">
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="interest">
+                    <h2>Reading Books</h2>
+                    <p>I'm really into books on finance and psychology—they're my go-to when I want to learn something
+                        new. I love how they offer a mix of practical life advice and a deeper understanding of how the
+                        mind works. It's fascinating to dig into the complexities of human behavior while also picking
+                        up tips on managing finances and making smarter decisions.
+                    </p>
+                    <p>Some of my favorite:</p>
+                    <div class="images">
+                        <div class="image-book-container">
+                            <img class="image" src="../assets/interests/books/money.jpg" alt="The Money Psychology">
+                        </div>
+                        <div class="image-book-container">
+                            <img class="image" src="../assets/interests/books/animal.jpg" alt="Animal Farm">
+                        </div>
+                        <div class="image-book-container">
+                            <img class="image" src="../assets/interests/books/if.jpg" alt="If you can">
+                        </div>
+                        <div class="image-book-container">
+                            <img class="image" src="../assets/interests/books/cronica.jpg"
+                                alt="Crónica dos Bons Malandros">
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid">
+            </div>
+            <button class="btn-back" onclick="showOptions()">
+                Press ESC to return or click here
+            </button>
+        </div>
+    </div>
+</body>
+<script src="../js/script.js"></script>
+
+</html>
