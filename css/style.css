@@ -336,7 +336,6 @@ body::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 5px;
     z-index: 1001;
     /* Remove the effect of CRT on images */
@@ -345,6 +344,7 @@ body::after {
 .project-image {
     width: 80%;
     height: 80%;
+    align-self: center;
 }
 
 .project-image-description p {
